@@ -31,7 +31,21 @@ li {
     list-style-type: none;
 }
 
-p {
+p,
+a {
     font-family: $fontTwo;    
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+    font-weight: 300;
+    color: black;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+h4 {
+    font-weight: 300;
 }
 

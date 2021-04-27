@@ -264,12 +264,26 @@ ul,
 li {
   margin: 0;
   padding: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   list-style-type: none;
 }
 
-p {
-  font-family: "Lato", sans-serif;
+p,
+a {
+  font-family: "Merriweather", serif;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  font-weight: 300;
+  color: black;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+h4 {
+  font-weight: 300;
 }
 
 header {
@@ -294,10 +308,12 @@ header h2 {
 h1 {
   font-size: 3.5rem;
   padding: 10px;
+  font-weight: 100;
 }
 
 h2 {
   font-size: 2rem;
+  font-weight: 100;
 }
 
 .about .wrapper {
@@ -320,4 +336,40 @@ h2 {
 
 .about .wrapper h2 {
   margin-bottom: 20px;
+}
+
+.projectContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 0;
+}
+
+.projectContainer .imgContainer,
+.projectContainer .description {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.description:nth-child(even) {
+  padding-left: 20px;
+  text-align: right;
+}
+
+.description:nth-child(even) a {
+  padding-left: 15px;
+}
+
+.description:nth-child(odd) {
+  padding-right: 20px;
+}
+
+.description:nth-child(odd) a {
+  padding-right: 15px;
+}
+
+.description h3,
+.description h4,
+.description p {
+  padding-bottom: 15px;
 }
