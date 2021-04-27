@@ -1,0 +1,14 @@
+.about .wrapper {
+    display: flex;
+    padding: 100px 30px;
+    .imgContainer {
+        flex-basis: 30%;
+    }
+    .textContainer {
+        flex-basis: 70%;
+        padding: 30px;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+}

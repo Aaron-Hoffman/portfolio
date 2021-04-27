@@ -1,0 +1,20 @@
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        text-align: right;
+        border-top: solid 1px $darkGrey;
+        padding: 10px;
+    }
+}
+
+h1 {
+    font-size: 3.5rem;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+}
