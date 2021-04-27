@@ -1,19 +1,21 @@
 html {
     font-size: 125%;
-    background-color: $lightGrey;
+    background-color: black;
 }
 
 img {
     display: block;
     height: auto;
     max-width: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
 }
 
 .wrapper {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: $white;
+    // background-color: $white;
 }
 
 h1,
@@ -27,22 +29,36 @@ ul,
 li {
     margin: 0;
     padding: 0;
-    font-family: $fontOne;
+    font-family: $oswald;
     list-style-type: none;
+    color: white;
 }
 
 p,
 a {
-    font-family: $fontTwo;    
+    font-family: $raleway;    
     font-size: 0.7rem;
     line-height: 1.2rem;
     font-weight: 300;
-    color: black;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    border-bottom: 1px solid $orange;
+    padding-bottom: 20px;
+    width: 50%;
+    margin: 0 auto;
 }
 
 h3{
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.7rem;
+    text-transform: uppercase;
+    color: $orange;
 }
 
 h4 {

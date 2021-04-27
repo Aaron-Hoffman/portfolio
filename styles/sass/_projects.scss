@@ -1,6 +1,6 @@
 .projectContainer {
     display: flex;
-    margin: 50px 0;
+    margin: 100px 0;
     .imgContainer,
     .description {
         flex-basis: 50%;
@@ -8,7 +8,8 @@
 }
 
 .description:nth-child(even) {
-    padding-left: 20px;
+    padding-left: 60px;
+    margin-left: 20px;
     text-align: right;
     a {
         padding-left: 15px;
@@ -16,17 +17,57 @@
 }
 
 .description:nth-child(odd) {
-    padding-right: 20px;
+    padding-right: 60px;
+    margin-right: 20px;
     a {
         padding-right: 15px;
     }
 }
 
+
 .description {
+    border-bottom: 1px solid $orange;
+    padding-bottom: 20px;
     h3,
     h4,
     p {
         padding-bottom: 15px;
     }
-
+    a {
+        text-transform: uppercase;
+    }
 }
+
+.imgContainer {
+    position: relative;
+}
+
+.orangeFilter {
+    position: absolute;
+    z-index: 10;
+    background-color: $orange;
+}
+
+.projectContainer img {
+    transition: filter 0.5s;
+}
+
+.projectContainer img:hover,
+.projectContainer img:focus {
+    filter: grayscale(0%);
+}
+
+// .projects li {
+//     position: relative;
+// }
+
+// .projects .imgContainer {
+//     position: absolute;
+// }
+
+// .description {
+//     background-color: rgba(10, 15, 20, 0.5);
+//     z-index: 10;
+//     flex-basis: 100%;
+//     height: 100%;
+// }
