@@ -355,14 +355,13 @@ header h2 {
 
 .squareContainer {
   position: relative;
-  height: 400px;
   width: 500px;
-  margin-top: 250px;
+  margin-top: 20vh;
   -webkit-animation: text 2.5s ease 1;
           animation: text 2.5s ease 1;
 }
 
-div.line {
+.line {
   width: 500px;
   border-bottom: 1px solid #ff3f1d;
   position: absolute;
@@ -377,6 +376,7 @@ header .wrapper {
 
 .down {
   text-align: center;
+  margin-top: 40vh;
 }
 
 @-webkit-keyframes text {
@@ -619,6 +619,38 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header h2 {
+    font-size: 1.8rem;
+  }
+  .squareContainer {
+    width: 400px;
+  }
+  .line {
+    width: 400px;
+    top: 80px;
+  }
+  @-webkit-keyframes line {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 400px;
+    }
+  }
+  @keyframes line {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 400px;
+    }
+  }
   .about .wrapper .textContainer {
     position: relative;
     right: 0;
@@ -629,11 +661,61 @@ footer p {
   .about .wrapper .textContainer p {
     color: white;
   }
+  .projects li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-bottom: 1px solid #ff3f1d;
+  }
+  .projects .orangeFilter {
+    display: none;
+  }
+  .projects img {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+    padding-bottom: 30px;
+  }
+  .projects .description {
+    border-bottom: none;
+  }
   .skills ul {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
   footer p {
     text-align: center;
+  }
+}
+
+@media (max-width: 490px) {
+  .squareContainer {
+    width: 280px;
+  }
+  .line {
+    width: 280px;
+    top: 135px;
+  }
+  @-webkit-keyframes line {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 280px;
+    }
+  }
+  @keyframes line {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 280px;
+    }
+  }
+}
+
+@media (max-height: 800px) {
+  .down {
+    margin-top: 25vh;
   }
 }

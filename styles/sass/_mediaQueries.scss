@@ -12,6 +12,35 @@
 }
 
 @media(max-width: 768px) {
+    .wrapper {
+        width: 90%;
+    }
+    // TODO: Mobile Navigation
+    header {
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+    }
+        .squareContainer {
+            width: 400px;
+        }
+        .line {
+            width: 400px;
+            top: 80px;
+        }
+
+        @keyframes line {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 400px;
+            }
+        }
+
     .about .wrapper .textContainer {
         position: relative;
         right: 0;
@@ -22,11 +51,54 @@
             color: white;
         }
     }
+
+    .projects{
+        li {
+        flex-direction: column;
+        border-bottom: 1px solid $orange;
+        }
+        .orangeFilter {
+            display: none;
+        }
+        img {
+            filter: grayscale(0);
+            padding-bottom: 30px;
+        }
+        .description {
+            border-bottom: none;
+        }
+    }
+
     .skills ul {
         grid-template-columns: 1fr 1fr;
     }
 
     footer p {
         text-align: center;
+    }
+}
+
+@media(max-width: 490px) {
+    .squareContainer {
+        width: 280px;
+    }
+    .line {
+        width: 280px;
+        top: 135px;
+    }
+
+    @keyframes line {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 280px;
+        }
+    }
+}
+
+@media(max-height: 800px) {
+    .down {
+        margin-top: 25vh;
     }
 }
