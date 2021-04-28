@@ -1,15 +1,29 @@
 header {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     h2 {
         text-align: right;
-        border-top: solid 1px $green;
+        // border-top: solid 1px $green;
         padding: 10px;
         color: white;
         text-transform: none;
     }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        margin-left: 25px;
+        transition: color 0.5s;
+    }
+    a:hover,
+    a:focus {
+        color: $orange;
+    }
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
 }
 
 h1 {
@@ -32,15 +46,47 @@ header h2 {
     position: relative;
     height: 400px;
     width: 500px;
+    margin-top: 250px;
+    animation: text 2.5s ease 1;
 }
 
-.blackSquare {
-    background-color: black;
-    padding: 50px 10px 10px;
-    overflow: hidden;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+div.line {
+    width: 500px;
+    border-bottom: 1px solid $orange;
     position: absolute;
+    top: 100px;
+    animation: line 2.5s ease;
+}
+
+header .wrapper {
+    position: relative;
+}
+
+i {
+    text-align: center;
+}
+@keyframes text {
+    0% {
+        left: 1500px;
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes line {
+    0% {
+        width: 0;
+    }
+
+    100%{
+        width: 500px;
+    }
 }

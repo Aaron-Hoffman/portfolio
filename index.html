@@ -14,19 +14,29 @@
 <body>
     <!-- Header Starts -->
     <header>
-        <div class="squareContainer">
-            <div class="blackSquare">
+        <nav class="wrapper">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="wrapper">
+            <div class="line"></div>
+            <div class="squareContainer">
                 <h1>Aaron Hoffman</h1>
                 <h2>Web Developer</h2>
             </div>
         </div>
+        <a href="#about" ><i class="fas fa-chevron-down"></i></a>
     </header>
     <!-- Header Ends -->
     <!-- Main Starts -->
     <main>
 
         <!-- About sections starts -->
-        <section class="about">
+        <section class="about" id='about'>
             <div class="wrapper">
                 <div class="imgContainer">
                     <img src="./assets/left-closed.jpg" alt="Headshot of Aaron Hoffman">
@@ -39,7 +49,7 @@
         </section>
         <!-- About section ends -->
         <!-- Projects section starts -->
-        <section class="projects">
+        <section class="projects" id="projects">
             <div class="wrapper">
                 <h2>Projects</h2>
 
@@ -113,7 +123,7 @@
         </section>
         <!-- Projects section ends -->
         <!-- Skills section starts -->
-        <section class="skills">
+        <section class="skills" id="skills">
             <div class="wrapper">
                 <h2>Skills</h2>
                 <ul>
@@ -156,7 +166,7 @@
         </section>
         <!-- Skills Section Ends -->
         <!-- Contact Section Starts -->
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="wrapper">
                 <h2>Contact</h2>
                 <form action="">
