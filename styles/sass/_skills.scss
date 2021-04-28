@@ -11,10 +11,16 @@ i {
     margin: 100px auto;
     li {
         text-align: center;
-        transition: color 0.5s;
+        display: flex;
+        flex-direction: column;
     }
-    li:hover,
-    li:focus {
-        color: $orange;
-    }
+}
+
+i {
+    transition: color 0.5s;
+    padding-bottom: 5px;
+}
+i:hover,
+i:focus {
+    color: $orange;
 }

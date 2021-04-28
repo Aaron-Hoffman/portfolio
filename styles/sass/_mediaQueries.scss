@@ -1,0 +1,9 @@
+@media(max-width: 768px) {
+    .skills ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}

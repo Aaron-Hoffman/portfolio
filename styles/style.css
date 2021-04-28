@@ -374,7 +374,7 @@ header .wrapper {
   position: relative;
 }
 
-i {
+.down {
   text-align: center;
 }
 
@@ -565,11 +565,55 @@ i {
 
 .skills ul li {
   text-align: center;
-  -webkit-transition: color 0.5s;
-  transition: color 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.skills ul li:hover,
-.skills ul li:focus {
+i {
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  padding-bottom: 5px;
+}
+
+i:hover,
+i:focus {
   color: #ff3f1d;
+}
+
+.contact p {
+  text-align: center;
+}
+
+.contact ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact ul a {
+  padding: 10px;
+}
+
+footer {
+  padding: 30px;
+  text-align: right;
+}
+
+footer p {
+  color: #ff3f1d;
+}
+
+@media (max-width: 768px) {
+  .skills ul {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  footer p {
+    text-align: center;
+  }
 }
