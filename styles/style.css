@@ -244,6 +244,7 @@ html {
 img {
   display: block;
   height: auto;
+  min-height: 100%;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -520,10 +521,6 @@ header .wrapper {
   transition: all 1s;
 }
 
-.imgContainer img {
-  height: 100%;
-}
-
 .projectContainer img {
   -webkit-transition: -webkit-filter 1s;
   transition: -webkit-filter 1s;
@@ -608,7 +605,30 @@ footer p {
   color: #ff3f1d;
 }
 
+@media (max-width: 1100px) {
+  .about .wrapper .textContainer {
+    top: 20%;
+  }
+}
+
+@media (max-width: 940px) {
+  .about .wrapper .textContainer {
+    top: 10%;
+    width: 40%;
+  }
+}
+
 @media (max-width: 768px) {
+  .about .wrapper .textContainer {
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .about .wrapper .textContainer p {
+    color: white;
+  }
   .skills ul {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
