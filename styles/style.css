@@ -266,7 +266,8 @@ p,
 label,
 input,
 ul,
-li {
+li,
+i {
   margin: 0;
   padding: 0;
   font-family: "Oswald", sans-serif;
@@ -305,6 +306,7 @@ h4 {
 
 header {
   height: 100vh;
+  position: relative;
 }
 
 header h2 {
@@ -328,7 +330,13 @@ header a:focus {
   color: #ff3f1d;
 }
 
-nav ul {
+header .fa-bars {
+  display: none;
+  margin-right: calc(40px - 5%);
+  cursor: pointer;
+}
+
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,6 +344,12 @@ nav ul {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding-top: 40px;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 h1 {
@@ -375,8 +389,19 @@ header .wrapper {
 }
 
 .down {
-  text-align: center;
   margin-top: 40vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.down i {
+  color: #ff3f1d;
+}
+
+.down i:hover,
+.down i:focus {
+  color: white;
 }
 
 @-webkit-keyframes text {
@@ -584,6 +609,15 @@ i:focus {
 
 .contact p {
   text-align: center;
+  color: teal;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+}
+
+.contact nav {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact ul {
@@ -599,10 +633,6 @@ i:focus {
 footer {
   padding: 30px;
   text-align: right;
-}
-
-footer p {
-  color: #ff3f1d;
 }
 
 @media (max-width: 1100px) {
@@ -621,6 +651,28 @@ footer p {
 @media (max-width: 768px) {
   .wrapper {
     width: 90%;
+  }
+  header ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: -300px;
+    -webkit-transition: right 0.7s;
+    transition: right 0.7s;
+  }
+  header ul li {
+    padding: 15px;
+  }
+  .on {
+    right: 5%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+  }
+  header .fa-bars {
+    display: initial;
   }
   header h1 {
     font-size: 2.5rem;
@@ -689,6 +741,9 @@ footer p {
 }
 
 @media (max-width: 490px) {
+  .down {
+    margin-top: 25vh;
+  }
   .squareContainer {
     width: 280px;
   }
@@ -717,5 +772,17 @@ footer p {
 @media (max-height: 800px) {
   .down {
     margin-top: 25vh;
+  }
+}
+
+@media (max-height: 700px) {
+  .down {
+    margin-top: 15vh;
+  }
+}
+
+@media (max-height: 600px) {
+  .down {
+    margin-top: 5vh;
   }
 }

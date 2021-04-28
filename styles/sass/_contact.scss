@@ -1,6 +1,14 @@
 .contact p {
     text-align: center;
+    color: teal;
+    font-family: $oswald;
+    font-size: 1.2rem;
 }
+
+.contact nav {
+    justify-content: center;
+}
+
 .contact ul {
     justify-content: center;
     a {

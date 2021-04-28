@@ -15,7 +15,26 @@
     .wrapper {
         width: 90%;
     }
-    // TODO: Mobile Navigation
+    // Mobile Navigation
+    header ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        right: -300px;
+        transition: right 0.7s;
+        li {
+            padding: 15px;
+        }
+    }
+    .on {
+        right: 5%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 10;
+    }
+    header .fa-bars {
+        display: initial;
+    }
+
     header {
         h1 {
             font-size: 2.5rem;
@@ -79,6 +98,9 @@
 }
 
 @media(max-width: 490px) {
+    .down {
+        margin-top: 25vh;
+    }
     .squareContainer {
         width: 280px;
     }
@@ -100,5 +122,17 @@
 @media(max-height: 800px) {
     .down {
         margin-top: 25vh;
+    }
+}
+
+@media(max-height: 700px) {
+    .down {
+        margin-top: 15vh;
+    }
+}
+
+@media(max-height: 600px) {
+    .down {
+        margin-top: 5vh;
     }
 }

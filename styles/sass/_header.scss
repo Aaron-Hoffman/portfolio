@@ -1,5 +1,6 @@
 header {
     height: 100vh;
+    position: relative;
     h2 {
         text-align: right;
         // border-top: solid 1px $green;
@@ -18,12 +19,22 @@ header {
     a:focus {
         color: $orange;
     }
+    .fa-bars {
+        display: none;
+        margin-right: calc(40px - 5%);
+        cursor: pointer;
+    }
+
+    
 }
 
-nav ul {
+nav {
     display: flex;
     justify-content: flex-end;
     padding-top: 40px;
+    ul {
+        display: flex;
+    }
 }
 
 h1 {
@@ -62,8 +73,15 @@ header .wrapper {
 }
 
 .down {
-    text-align: center;
     margin-top: 40vh;
+    justify-content: center;
+    i {
+        color:$orange;
+    }
+    i:hover,
+    i:focus {
+        color: white;
+    }
 }
 
 @keyframes text {
