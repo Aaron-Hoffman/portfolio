@@ -9,7 +9,6 @@
 
 .description:nth-child(even) {
     padding-left: 60px;
-    margin-left: 20px;
     text-align: right;
     a {
         padding-left: 15px;
@@ -18,12 +17,10 @@
 
 .description:nth-child(odd) {
     padding-right: 60px;
-    margin-right: 20px;
     a {
         padding-right: 15px;
     }
 }
-
 
 .description {
     border-bottom: 1px solid $orange;
@@ -35,39 +32,52 @@
     }
     a {
         text-transform: uppercase;
+        transition: color 0.5s;
+    }
+    a:hover,
+    a:focus {
+        color: $orange;
     }
 }
 
 .imgContainer {
     position: relative;
+    cursor: pointer;
+    div.orangeFilter {
+        position: absolute;
+        z-index: 10;
+        opacity: 0.6;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $orange;
+        transition: all 1s;
+    }
+    img {
+        height: 100%;
+    }
 }
 
-.orangeFilter {
-    position: absolute;
-    z-index: 10;
-    background-color: $orange;
-}
 
 .projectContainer img {
-    transition: filter 0.5s;
+    transition: filter 1s;
 }
 
-.projectContainer img:hover,
-.projectContainer img:focus {
+.projectContainer .imgContainer:hover img,
+.projectContainer .imgContainer:focus img {
     filter: grayscale(0%);
 }
 
-// .projects li {
-//     position: relative;
-// }
+.imgContainer:nth-child(odd):hover .orangeFilter,
+.imgContainer:nth-child(odd):focus .orangeFilter {
+    right: -100%;
+    opacity: 0;
+}
 
-// .projects .imgContainer {
-//     position: absolute;
-// }
+.imgContainer:nth-child(even):hover .orangeFilter,
+.imgContainer:nth-child(even):focus .orangeFilter {
+    left: -100%;
+    opacity: 0;
+}
 
-// .description {
-//     background-color: rgba(10, 15, 20, 0.5);
-//     z-index: 10;
-//     flex-basis: 100%;
-//     height: 100%;
-// }

@@ -244,8 +244,8 @@ img {
   display: block;
   height: auto;
   max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
@@ -286,17 +286,16 @@ h2 {
   letter-spacing: 3px;
   font-size: 2.5rem;
   font-weight: 400;
-  border-bottom: 1px solid #ff4400;
   padding-bottom: 20px;
-  width: 50%;
   margin: 0 auto;
+  text-transform: uppercase;
 }
 
 h3 {
   font-weight: 300;
   font-size: 1.7rem;
   text-transform: uppercase;
-  color: #ff4400;
+  color: #0e7444;
 }
 
 h4 {
@@ -318,27 +317,31 @@ header {
 
 header h2 {
   text-align: right;
-  border-top: solid 1px white;
+  border-top: solid 1px #0e7444;
   padding: 10px;
   color: white;
+  text-transform: none;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 3.4rem;
   padding: 10px;
-  font-weight: 100;
+  font-weight: 200;
+  font-family: "Oswald", sans-serif;
   color: white;
+  letter-spacing: 5px;
 }
 
 header h2 {
   font-size: 2rem;
-  font-weight: 100;
+  font-weight: 200;
+  font-family: "Oswald", sans-serif;
 }
 
 .squareContainer {
   position: relative;
   height: 400px;
-  width: 400px;
+  width: 500px;
 }
 
 .blackSquare {
@@ -353,25 +356,25 @@ header h2 {
 }
 
 .about .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 100px 30px;
+  padding: 100px 0;
+  position: relative;
 }
 
 .about .wrapper .imgContainer {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  width: 100%;
 }
 
 .about .wrapper .textContainer {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
-  padding: 30px;
+  width: 30%;
+  position: absolute;
+  right: 10%;
+  top: 30%;
 }
 
-.about .wrapper h2 {
+.about .wrapper h2,
+.about .wrapper p {
   margin-bottom: 20px;
+  color: black;
 }
 
 .projectContainer {
@@ -389,7 +392,6 @@ header h2 {
 
 .description:nth-child(even) {
   padding-left: 60px;
-  margin-left: 20px;
   text-align: right;
 }
 
@@ -399,7 +401,6 @@ header h2 {
 
 .description:nth-child(odd) {
   padding-right: 60px;
-  margin-right: 20px;
 }
 
 .description:nth-child(odd) a {
@@ -407,7 +408,7 @@ header h2 {
 }
 
 .description {
-  border-bottom: 1px solid #ff4400;
+  border-bottom: 1px solid #ff3f1d;
   padding-bottom: 20px;
 }
 
@@ -419,27 +420,83 @@ header h2 {
 
 .description a {
   text-transform: uppercase;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.description a:hover,
+.description a:focus {
+  color: #ff3f1d;
 }
 
 .imgContainer {
   position: relative;
+  cursor: pointer;
 }
 
-.orangeFilter {
+.imgContainer div.orangeFilter {
   position: absolute;
   z-index: 10;
-  background-color: #ff4400;
+  opacity: 0.6;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ff3f1d;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.imgContainer img {
+  height: 100%;
 }
 
 .projectContainer img {
-  -webkit-transition: -webkit-filter 0.5s;
-  transition: -webkit-filter 0.5s;
-  transition: filter 0.5s;
-  transition: filter 0.5s, -webkit-filter 0.5s;
+  -webkit-transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s;
+  transition: filter 1s;
+  transition: filter 1s, -webkit-filter 1s;
 }
 
-.projectContainer img:hover,
-.projectContainer img:focus {
+.projectContainer .imgContainer:hover img,
+.projectContainer .imgContainer:focus img {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
+}
+
+.imgContainer:nth-child(odd):hover .orangeFilter,
+.imgContainer:nth-child(odd):focus .orangeFilter {
+  right: -100%;
+  opacity: 0;
+}
+
+.imgContainer:nth-child(even):hover .orangeFilter,
+.imgContainer:nth-child(even):focus .orangeFilter {
+  left: -100%;
+  opacity: 0;
+}
+
+i {
+  font-size: 2.5rem;
+}
+
+.skills ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 60px;
+  width: 80%;
+  margin: 100px auto;
+}
+
+.skills ul li {
+  text-align: center;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.skills ul li:hover,
+.skills ul li:focus {
+  color: #ff3f1d;
 }

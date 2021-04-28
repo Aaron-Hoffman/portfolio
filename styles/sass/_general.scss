@@ -7,7 +7,7 @@ img {
     display: block;
     height: auto;
     max-width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     filter: grayscale(100%);
 }
 
@@ -15,7 +15,6 @@ img {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
-    // background-color: $white;
 }
 
 h1,
@@ -48,17 +47,17 @@ h2 {
     letter-spacing: 3px;
     font-size: 2.5rem;
     font-weight: 400;
-    border-bottom: 1px solid $orange;
     padding-bottom: 20px;
-    width: 50%;
     margin: 0 auto;
+    // color: $green;
+    text-transform: uppercase;
 }
 
 h3{
     font-weight: 300;
     font-size: 1.7rem;
     text-transform: uppercase;
-    color: $orange;
+    color: $green;
 }
 
 h4 {

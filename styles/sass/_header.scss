@@ -5,28 +5,33 @@ header {
     align-items: center;
     h2 {
         text-align: right;
-        border-top: solid 1px white;
+        border-top: solid 1px $green;
         padding: 10px;
         color: white;
+        text-transform: none;
     }
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3.4rem;
     padding: 10px;
-    font-weight: 100;
+    font-weight: 200;
+    font-family: $oswald;
     color: white;
+    letter-spacing: 5px;
+    // text-transform: uppercase;
 }
 
 header h2 {
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 200;
+    font-family: $oswald;
 }
 
 .squareContainer {
     position: relative;
     height: 400px;
-    width: 400px;
+    width: 500px;
 }
 
 .blackSquare {
