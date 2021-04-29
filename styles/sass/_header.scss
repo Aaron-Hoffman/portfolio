@@ -44,7 +44,6 @@ h1 {
     font-family: $oswald;
     color: white;
     letter-spacing: 5px;
-    // text-transform: uppercase;
 }
 
 header h2 {
@@ -77,6 +76,7 @@ header .wrapper {
     justify-content: center;
     i {
         color:$orange;
+        font-size: 1.5rem;
     }
     i:hover,
     i:focus {
