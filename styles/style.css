@@ -653,6 +653,9 @@ footer {
   .wrapper {
     width: 90%;
   }
+  header {
+    overflow: hidden;
+  }
   header ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

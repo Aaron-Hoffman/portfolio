@@ -16,6 +16,9 @@
         width: 90%;
     }
     // Mobile Navigation
+    header {
+        overflow: hidden;
+    }
     header ul {
         flex-direction: column;
         position: absolute;
