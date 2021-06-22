@@ -458,6 +458,7 @@ header .wrapper {
 
 .about .wrapper .imgContainer {
   width: 100%;
+  cursor: default;
 }
 
 .about .wrapper .textContainer {
