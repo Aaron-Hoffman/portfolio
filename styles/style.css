@@ -14,7 +14,7 @@ article, aside, footer, header, nav, section {
 
 h1 {
   font-size: 2em;
-  margin: .67em 0;
+  margin: 0.67em 0;
 }
 
 figcaption, figure, main {
@@ -33,7 +33,7 @@ hr {
 }
 
 pre {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -58,7 +58,7 @@ b, strong {
 }
 
 code, kbd, samp {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -83,11 +83,11 @@ sub, sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 audio, video {
@@ -136,7 +136,7 @@ button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring
 }
 
 fieldset {
-  padding: .35em .75em .625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
@@ -206,7 +206,7 @@ template {
   visibility: hidden;
   display: block;
   font-size: 0;
-  content: '';
+  content: "";
   clear: both;
   height: 0;
 }
@@ -237,7 +237,7 @@ html {
 
 html {
   font-size: 125%;
-  background-color: #000100;
+  background-color: rgb(0, 1, 0);
   scroll-behavior: smooth;
 }
 
@@ -308,14 +308,12 @@ header {
   height: 100vh;
   position: relative;
 }
-
 header h2 {
   text-align: right;
   padding: 10px;
   color: white;
   text-transform: none;
 }
-
 header a {
   text-decoration: none;
   text-transform: uppercase;
@@ -324,12 +322,10 @@ header a {
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
-
 header a:hover,
 header a:focus {
-  color: #ff3f1d;
+  color: rgb(255, 63, 29);
 }
-
 header .fa-bars {
   display: none;
   margin-right: calc(40px - 5%);
@@ -345,7 +341,6 @@ nav {
           justify-content: flex-end;
   padding-top: 40px;
 }
-
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -377,7 +372,7 @@ header h2 {
 
 .line {
   width: 500px;
-  border-bottom: 1px solid #ff3f1d;
+  border-bottom: 1px solid rgb(255, 63, 29);
   position: absolute;
   top: 100px;
   -webkit-animation: line 2.5s ease;
@@ -394,12 +389,10 @@ header .wrapper {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .down i {
-  color: #ff3f1d;
+  color: rgb(255, 63, 29);
   font-size: 1.5rem;
 }
-
 .down i:hover,
 .down i:focus {
   color: white;
@@ -432,7 +425,6 @@ header .wrapper {
     opacity: 1;
   }
 }
-
 @-webkit-keyframes line {
   0% {
     width: 0;
@@ -441,7 +433,6 @@ header .wrapper {
     width: 500px;
   }
 }
-
 @keyframes line {
   0% {
     width: 0;
@@ -450,32 +441,27 @@ header .wrapper {
     width: 500px;
   }
 }
-
 .about .wrapper {
   margin: 100px auto;
   position: relative;
 }
-
 .about .wrapper .imgContainer {
   width: 100%;
   cursor: default;
 }
-
 .about .wrapper .textContainer {
   width: 30%;
   position: absolute;
   right: 10%;
-  top: 30%;
+  top: 15%;
 }
-
 .about .wrapper h2,
 .about .wrapper p {
   margin-bottom: 20px;
   color: black;
 }
-
 .about .wrapper h2 {
-  color: #ff3f1d;
+  color: rgb(255, 63, 29);
 }
 
 .projectContainer {
@@ -484,7 +470,6 @@ header .wrapper {
   display: flex;
   margin: 100px 0;
 }
-
 .projectContainer .imgContainer,
 .projectContainer .description {
   -ms-flex-preferred-size: 50%;
@@ -495,7 +480,6 @@ header .wrapper {
   padding-left: 60px;
   text-align: right;
 }
-
 .description:nth-child(even) a {
   padding-left: 15px;
 }
@@ -503,38 +487,33 @@ header .wrapper {
 .description:nth-child(odd) {
   padding-right: 60px;
 }
-
 .description:nth-child(odd) a {
   padding-right: 15px;
 }
 
 .description {
-  border-bottom: 1px solid #ff3f1d;
+  border-bottom: 1px solid rgb(255, 63, 29);
   padding-bottom: 20px;
 }
-
 .description h3,
 .description h4,
 .description p {
   padding-bottom: 15px;
 }
-
 .description a {
   text-transform: uppercase;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
-
 .description a:hover,
 .description a:focus {
-  color: #ff3f1d;
+  color: rgb(255, 63, 29);
 }
 
 .imgContainer {
   position: relative;
   cursor: pointer;
 }
-
 .imgContainer div.orangeFilter {
   position: absolute;
   z-index: 10;
@@ -543,7 +522,7 @@ header .wrapper {
   top: 0;
   bottom: 0;
   left: 0;
-  background-color: #ff3f1d;
+  background-color: rgb(255, 63, 29);
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -586,7 +565,6 @@ i {
   width: 80%;
   margin: 100px auto;
 }
-
 .skills ul li {
   text-align: center;
   display: -webkit-box;
@@ -606,7 +584,7 @@ i {
 
 i:hover,
 i:focus {
-  color: #ff3f1d;
+  color: rgb(255, 63, 29);
 }
 
 .contact p {
@@ -627,7 +605,6 @@ i:focus {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .contact ul a {
   padding: 10px;
 }
@@ -639,17 +616,22 @@ footer {
 
 @media (max-width: 1100px) {
   .about .wrapper .textContainer {
-    top: 20%;
-  }
-}
-
-@media (max-width: 940px) {
-  .about .wrapper .textContainer {
-    top: 10%;
+    top: 8%;
     width: 40%;
   }
 }
-
+@media (max-width: 940px) {
+  .about .wrapper .textContainer {
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .about .wrapper .textContainer p {
+    color: white;
+  }
+}
 @media (max-width: 768px) {
   .wrapper {
     width: 90%;
@@ -708,22 +690,12 @@ footer {
       width: 400px;
     }
   }
-  .about .wrapper .textContainer {
-    position: relative;
-    right: 0;
-    top: 0;
-    width: 100%;
-    margin-top: 40px;
-  }
-  .about .wrapper .textContainer p {
-    color: white;
-  }
   .projects li {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border-bottom: 1px solid #ff3f1d;
+    border-bottom: 1px solid rgb(255, 63, 29);
   }
   .projects .orangeFilter {
     display: none;
@@ -737,14 +709,12 @@ footer {
     border-bottom: none;
   }
   .skills ul {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   footer p {
     text-align: center;
   }
 }
-
 @media (max-width: 490px) {
   .down {
     margin-top: 25vh;
@@ -773,19 +743,16 @@ footer {
     }
   }
 }
-
 @media (max-height: 800px) {
   .down {
     margin-top: 25vh;
   }
 }
-
 @media (max-height: 700px) {
   .down {
     margin-top: 15vh;
   }
 }
-
 @media (max-height: 600px) {
   .down {
     margin-top: 5vh;
